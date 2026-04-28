@@ -2,8 +2,9 @@ import eslint from '@eslint/js';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import eslintConfigPrettier from 'eslint-config-prettier/flat';
+import { defineConfig } from 'eslint/config';
 
-export default tseslint.config(
+const eslintConfig = defineConfig([
   {
     ignores: ['eslint.config.mjs'],
   },
@@ -56,4 +57,6 @@ export default tseslint.config(
   },
 
   eslintConfigPrettier,
-);
+]);
+
+export default eslintConfig;
