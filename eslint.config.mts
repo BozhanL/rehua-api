@@ -1,5 +1,4 @@
 import eslint from '@eslint/js';
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
@@ -7,9 +6,10 @@ export default tseslint.config(
   {
     ignores: ['eslint.config.mjs'],
   },
+
   eslint.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
-  eslintPluginPrettierRecommended,
+  tseslint.configs.strictTypeChecked,
+  tseslint.configs.stylisticTypeChecked,
   {
     languageOptions: {
       globals: {
@@ -22,13 +22,35 @@ export default tseslint.config(
         tsconfigRootDir: import.meta.dirname,
       },
     },
+    rules: {
+      '@typescript-eslint/explicit-function-return-type': 'error',
+    },
+  },
+  {
+    // This check will cause linter halt.
+    // Maybe related to https://github.com/typescript-eslint/typescript-eslint/pull/11605
+    rules: {
+      '@typescript-eslint/no-deprecated': 'off',
+    },
+  },
+  {
+    // NestJS has a lot of empty classes as Module.
+    rules: {
+      '@typescript-eslint/no-extraneous-class': ['error', { allowEmpty: true }],
+    },
+  },
+  {
+    // https://typescript-eslint.io/troubleshooting/typed-linting/performance#eslint-plugin-import
+    rules: {
+      'import/named': 'off',
+      'import/namespace': 'off',
+      'import/default': 'off',
+      'import/no-named-as-default-member': 'off',
+    },
   },
   {
     rules: {
-      '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-floating-promises': 'warn',
-      '@typescript-eslint/no-unsafe-argument': 'warn',
-      'prettier/prettier': ['error', { endOfLine: 'auto' }],
+      curly: ['error', 'all'],
     },
   },
 );
