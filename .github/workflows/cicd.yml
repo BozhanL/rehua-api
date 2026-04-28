@@ -61,13 +61,14 @@ jobs:
         run: npm ci --no-audit --ignore-scripts
 
       - name: 🧪 Run tests
-        run: npm test
+        run: npm run test:cov | tee ./coverage.txt && exit ${PIPESTATUS[0]}
 
       - name: 🧪 Run Jest Coverage Comment
         uses: MishaKav/jest-coverage-comment@40d7aed38d0fbaea266c34c12ab06356eec894eb # v1.0.33
         if: ${{ success() || (failure() && steps.install.conclusion == 'success') }}
         with:
           create-new-comment: false
+          coverage-path: ./coverage.txt
 
   build:
     runs-on: ubuntu-latest
