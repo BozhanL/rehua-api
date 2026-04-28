@@ -74,9 +74,13 @@ const config: Config = {
 
   // An array of file extensions your modules use
   moduleFileExtensions: ['js', 'json', 'ts'],
+  extensionsToTreatAsEsm: ['.ts'],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  moduleNameMapper: { '^@/(.*)$': '<rootDir>/$1' },
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1',
+    '^(\\.{1,2}/.*)\\.js$': '$1',
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -88,7 +92,7 @@ const config: Config = {
   // notifyMode: "failure-change",
 
   // A preset that is used as a base for Jest's configuration
-  // preset: undefined,
+  preset: 'ts-jest/presets/default-esm',
 
   // Run tests from one or more projects
   // projects: undefined,
@@ -162,7 +166,14 @@ const config: Config = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    '^.+\\.(t|j)s$': 'ts-jest',
+    '^.+\\.(t|j)s$': [
+      'ts-jest',
+      {
+        useESM: true,
+        isolatedModules: true,
+        tsconfig: 'tsconfig.json',
+      },
+    ],
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation

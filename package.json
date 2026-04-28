@@ -11,6 +11,7 @@
     "url": "https://github.com/BozhanL/rehua-api/issues"
   },
   "private": true,
+  "type": "module",
   "engines": {
     "node": "^24",
     "npm": "^11.11"

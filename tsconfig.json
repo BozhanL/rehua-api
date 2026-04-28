@@ -2,7 +2,6 @@
   "compilerOptions": {
     "module": "nodenext",
     "moduleResolution": "nodenext",
-    "resolvePackageJsonExports": true,
     "esModuleInterop": true,
     "declaration": true,
     "removeComments": true,
@@ -37,7 +36,7 @@
 
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "verbatimModuleSyntax": false,
+    "verbatimModuleSyntax": true,
     "strictNullChecks": true
   }
 }
