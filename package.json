@@ -36,18 +36,18 @@
     "fix-all": "concurrently -m 1 --kill-others-on-fail npm:lint:fix npm:format:fix"
   },
   "dependencies": {
-    "@nestjs/common": "11.1.17",
-    "@nestjs/core": "11.1.18",
-    "@nestjs/platform-express": "11.1.17",
+    "@nestjs/common": "11.1.19",
+    "@nestjs/core": "11.1.19",
+    "@nestjs/platform-express": "11.1.19",
     "reflect-metadata": "0.2.2",
     "rxjs": "7.8.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.3.5",
     "@eslint/js": "10.0.1",
-    "@nestjs/cli": "11.0.16",
-    "@nestjs/schematics": "11.0.9",
-    "@nestjs/testing": "11.1.17",
+    "@nestjs/cli": "11.0.21",
+    "@nestjs/schematics": "11.1.0",
+    "@nestjs/testing": "11.1.19",
     "@types/express": "5.0.6",
     "@types/jest": "30.0.0",
     "@types/node": "24.12.2",
