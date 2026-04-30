@@ -1,6 +1,6 @@
 comment-summary-in-pr: always
 allow-licenses:
-  - AGPL-3.0-or-later
+  - GPL-3.0-or-later
   - MIT
   - Apache-2.0
   - ISC

@@ -3,7 +3,7 @@
     {
       "internalChecksFilter": "strict",
       "matchDatasources": ["npm"],
-      "minimumReleaseAge": "30 days"
+      "minimumReleaseAge": "7 days"
     },
     {
       "description": "Do not require Minimum Release Age for update types that are controlled by the package manager",

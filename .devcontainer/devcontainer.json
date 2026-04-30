@@ -16,7 +16,8 @@
         "HTMLHint.vscode-htmlhint",
         "ecmel.vscode-html-css",
         "ms-azuretools.vscode-containers",
-        "SonarSource.sonarlint-vscode"
+        "SonarSource.sonarlint-vscode",
+        "oderwat.indent-rainbow"
       ]
     }
   },
