@@ -1,14 +1,10 @@
 import eslint from '@eslint/js';
-import globals from 'globals';
-import tseslint from 'typescript-eslint';
 import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import { defineConfig } from 'eslint/config';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
 const eslintConfig = defineConfig([
-  {
-    ignores: ['eslint.config.mjs'],
-  },
-
   eslint.configs.recommended,
   tseslint.configs.strictTypeChecked,
   tseslint.configs.stylisticTypeChecked,
