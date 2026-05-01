@@ -147,6 +147,7 @@ jobs:
     needs:
       - check
       - test
+      - commitlint
       - build
     steps:
       - name: ✔️ Fail if any dependency failed
