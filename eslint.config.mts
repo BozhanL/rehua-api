@@ -55,6 +55,13 @@ const eslintConfig = defineConfig([
     },
   },
 
+  {
+    files: ['commitlint.config.js'],
+    ...tseslint.configs.disableTypeChecked,
+  },
+
+  { ignores: ['node_modules/**', 'dist/**', 'coverage/**', '.husky/**'] },
+
   eslintConfigPrettier,
 ]);
 
