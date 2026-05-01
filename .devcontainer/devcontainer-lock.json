@@ -1,5 +1,10 @@
 {
   "features": {
+    "ghcr.io/devcontainers-extra/features/cz-cli:1": {
+      "version": "1.0.2",
+      "resolved": "ghcr.io/devcontainers-extra/features/cz-cli@sha256:84d32f60ec45bdca23a0ec69d753883fb01fe594f204c5903b2871b2ac4075ed",
+      "integrity": "sha256:84d32f60ec45bdca23a0ec69d753883fb01fe594f204c5903b2871b2ac4075ed"
+    },
     "ghcr.io/devcontainers-extra/features/nestjs-cli:2": {
       "version": "2.0.16",
       "resolved": "ghcr.io/devcontainers-extra/features/nestjs-cli@sha256:ab4c5c5064288e2d1d51081e3429fabb3394fdfc575305c768328d5ab167f8b6",
