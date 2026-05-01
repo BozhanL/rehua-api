@@ -34,6 +34,7 @@
     "test:e2e": "npm run test -- --config ./test/jest.config.ts",
     "check-all": "concurrently -m 1 --kill-others-on-fail npm:type npm:lint npm:test:cov npm:test:e2e npm:format",
     "fix-all": "concurrently -m 1 --kill-others-on-fail npm:lint:fix npm:format:fix",
+    "commitlint": "commitlint",
     "prepare": "husky"
   },
   "dependencies": {
