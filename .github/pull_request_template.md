@@ -8,7 +8,7 @@ Please check if your PR fulfills the following requirements:
 
 - [ ] The commit message follows Conventional Commits 1.0.0: <https://www.conventionalcommits.org/en/v1.0.0/>
 - [ ] The branch name follows Conventional Branch 1.0.0: <https://conventional-branch.github.io/>
-- [ ] The PR title follows the convention: `<type>: [<issue or feature number>] <short description>` (e.g. `Feature: #123 Implement login route`)
+- [ ] The PR title follows Conventional Commits 1.0.0 with optional issue or feature number at the end: <https://www.conventionalcommits.org/en/v1.0.0/>
 - [ ] Tests for the changes have been added (for bug fixes / features)
 - [ ] `npm run check-all` passes
 
