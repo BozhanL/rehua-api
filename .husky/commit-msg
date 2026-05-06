@@ -1,0 +1,5 @@
+npx --no -- commitlint --edit "$1"
+
+npm run check-all:par
+
+echo Check complete
