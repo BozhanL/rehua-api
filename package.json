@@ -63,7 +63,7 @@
     "eslint-config-prettier": "10.1.8",
     "globals": "17.5.0",
     "husky": "9.1.7",
-    "jest": "30.3.0",
+    "jest": "30.4.2",
     "jiti": "2.6.1",
     "prettier": "3.8.3",
     "source-map-support": "0.5.21",
